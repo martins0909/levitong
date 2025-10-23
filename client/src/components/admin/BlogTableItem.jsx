@@ -3,7 +3,7 @@ import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
 
-const BlogTableItem = ({ blog, fetchBlogs, index }) => {
+const BlogTableItem = ({ blog, fetchBlogs, index }) => {  
   const { axios } = useAppContext();
  
   if (!blog) return null; // Early return if blog is not provided
