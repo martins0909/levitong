@@ -12,7 +12,7 @@ import materialRoutes from "./routes/materialRoutes.js";
 import commentRoutes from "./routes/commentRoutes.js"; // ✅ regular comments
 import updateRoutes from "./routes/updateRoutes.js";
 import bcommentRoutes from "./routes/bcommentRoutes.js"; // ✅ tutorial comments
-import bblogRoutes from "./routes/BblogRoutes.js";
+import bblogRoutes from "./routes/bblogRoutes.js";
 import bmaterialRoutes from "./routes/bmaterialRoutes.js";
 
 const app = express();
