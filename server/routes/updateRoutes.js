@@ -1,5 +1,5 @@
 import express from "express";
-import { createUpdate, getUpdates } from "../controllers/UpdateController.js";
+import { createUpdate, getUpdates } from "../controllers/updateController.js";
 import Update from "../models/Update.js"; // ✅ Make sure this model exists
 
 const router = express.Router();
