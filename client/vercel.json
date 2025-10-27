@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://levitong-server.onrender.com/api/:path*" }
+    { "source": "/api/:path*", "destination": "https://levitong-server.onrender.com/api/:path*" },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
