@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+Disallow: /wp-admin
+
+# Allow the site root and other public pages
+Allow: /
+
+# Optional: point to your sitemap if you have one
+Sitemap: https://levitong.com/sitemap.xml
