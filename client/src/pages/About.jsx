@@ -1,10 +1,19 @@
 
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import myPhoto from "../assets/myphoto.jpg";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen">
-      
+    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen relative">
+      <button 
+        onClick={() => navigate('/')} 
+        className="fixed top-4 left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:bg-blue-700 transition duration-300">
+        Home
+      </button>
+
       {/* Hero Banner */}
       <div
         className="relative h-[50vh] flex items-center justify-center bg-cover bg-center"

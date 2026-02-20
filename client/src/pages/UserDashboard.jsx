@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BblogComments from "../components/BblogComments";
 
 const API_BASE_URL = import.meta.env.VITE_BASE_URL || "http://localhost:3000";
 
 
 const UserDashboard = () => {
+  const navigate = useNavigate();
   const [blogs, setBlogs] = useState([]);
   const [materials, setMaterials] = useState([]);
   const [updates, setUpdates] = useState([]);
@@ -41,7 +43,13 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-8 relative">
+      <button 
+        onClick={() => navigate('/')} 
+        className="absolute top-4 left-4 bg-white text-indigo-600 px-4 py-2 rounded-full font-bold shadow-lg hover:bg-gray-100 transition duration-300 z-50">
+        Home
+      </button>
+
       {/* ✅ Custom animation styles */}
       <style>
         {`

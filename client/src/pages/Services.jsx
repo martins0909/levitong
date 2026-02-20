@@ -1,5 +1,6 @@
 
 import {  Smartphone, Megaphone, Video, Lightbulb, BookOpen, Shield, PenTool, Newspaper, Zap } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -50,8 +51,16 @@ const services = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 relative">
+      <button 
+        onClick={() => navigate('/')} 
+        className="fixed top-4 left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:bg-blue-700 transition duration-300">
+        Home
+      </button>
+
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
           Our Services

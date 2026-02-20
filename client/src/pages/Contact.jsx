@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -34,6 +36,12 @@ const Contact = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-blue-900 via-gray-900 to-black text-white px-6 md:px-16 lg:px-24 xl:px-32 py-16">
+      <button 
+        onClick={() => navigate('/')} 
+        className="absolute top-4 left-4 bg-white text-blue-900 px-4 py-2 rounded-full font-bold shadow-lg hover:bg-gray-100 transition duration-300 z-50">
+        Home
+      </button>
+
       {/* Title */}
       <h1 className="text-4xl font-bold mb-4">Contact Leviton Admin</h1>
       <p className="text-gray-300 max-w-xl mb-10">
