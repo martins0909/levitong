@@ -26,15 +26,17 @@ import UserList from './pages/admin/UserList';
 import UserDashboard from './pages/UserDashboard';
 import AdSense from './components/AdSense'; // Import AdSense component
 import SEOControl from './components/SEOControl';
+import SmartsuppChat from './components/SmartsuppChat';
 
 const App = () => {
-    const { token } = useAppContext();
+  const { token } = useAppContext();
 
-    return (
-        <div>
-            <Toaster />
-            <SEOControl /> {/* Add SEO setup */}
-            <AdSense /> {/* Load AdSense conditionally */}
+  return (
+    <div>
+      <Toaster />
+      <SEOControl /> {/* Add SEO setup */}
+      <AdSense /> {/* Load AdSense conditionally */}
+      <SmartsuppChat /> {/* Smartsupp Live Chat */}
       <Routes>
         {/* 🌍 Public Routes */}
         <Route path="/" element={<Home />} />
