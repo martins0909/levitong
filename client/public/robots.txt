@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin panel and protected routes
+Disallow: /admin/
+Disallow: /admin/*
+
+# Sitemaps (optional but recommended)
+# Sitemap: https://levitong.com/sitemap.xml

@@ -24,13 +24,17 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import UserList from './pages/admin/UserList';
 import UserDashboard from './pages/UserDashboard';
+import AdSense from './components/AdSense'; // Import AdSense component
+import SEOControl from './components/SEOControl';
 
 const App = () => {
-  const { token } = useAppContext();
+    const { token } = useAppContext();
 
-  return (
-    <div>
-      <Toaster />
+    return (
+        <div>
+            <Toaster />
+            <SEOControl /> {/* Add SEO setup */}
+            <AdSense /> {/* Load AdSense conditionally */}
       <Routes>
         {/* 🌍 Public Routes */}
         <Route path="/" element={<Home />} />
